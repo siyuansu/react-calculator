@@ -1,0 +1,36 @@
+button {
+	border: none;
+	border-radius: .5rem;
+	background-color:#8d8582;
+	color: #ffffff;
+	font-size: 2rem;
+}
+
+.btnA {
+	background-color:#776d69;
+}
+
+.btnA:hover {
+	background-color:#8d8684;
+}
+
+.btnB {
+	background-color:#ff9f0a;
+}
+
+.btnB:hover {
+	background-color:#cb7d06;
+}
+
+
+.btnC {
+	background-color:#8d8582;
+}
+
+.btnC:hover {
+	background-color:#bbb7b6;
+}
+
+.zero {
+	grid-column: 1/3;
+}

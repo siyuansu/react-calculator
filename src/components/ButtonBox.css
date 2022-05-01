@@ -1,0 +1,10 @@
+.buttonBox {
+	flex: 5;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(5, 1fr);
+	grid-gap: .5rem .5rem;
+	/* background-color:darkorchid; */
+	border-radius: .5rem;
+	margin: .5rem;
+}

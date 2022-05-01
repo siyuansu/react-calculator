@@ -1,0 +1,13 @@
+.screen {
+	flex: 1;
+	display: flex;
+	/* background-color:darkcyan; */
+	border-radius: .5rem;
+	margin: .5rem .5rem 0 .5rem;
+	color: white;
+	padding: .5rem .5rem 0 .5rem;
+	font-size: 4rem;
+	align-items: flex-end;
+	justify-content: flex-end;
+	overflow: hidden;
+}
