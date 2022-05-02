@@ -110,9 +110,27 @@ const App = () => {
 
 	const equalsHandler = (e) => {
 		e.preventDefault()
-		const value = e.target.innerHTML
-
-
+		let sign = calc.sign
+		if ( calc.input && calc.sign !== '') {
+			let res = calc.res
+			let num = Number(calc.num)
+			res = sign === '/' && calc.num !== 0
+			? res / num
+			: sign === '/' && calc.num === 0
+			? 'Not a number'
+			: sign === 'x'
+			? res * num
+			: sign === '-'
+			? res - num
+			: sign === '+'
+			? res + num
+			: res
+			setCalc({
+				...calc,
+				res: res,
+				input: false
+			})
+		}
 		console.log('equals')
 	}
 
