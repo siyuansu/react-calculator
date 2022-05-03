@@ -60,8 +60,15 @@ const App = () => {
 		console.log('invert')
 	}
 
-	const percentHandler = (e) => {
-		console.log('percent')
+	const percentHandler = () => {
+		// console.log('percent')
+		if(calc.res == 'Not a number') {
+			console.log('The result is not an number')
+			return
+		}
+		calc.input
+		?setCalc({...calc,num: parseFloat(calc.num)/100})
+		:setCalc({...calc,res: parseFloat(calc.res)/100}) 
 	}
 
 	const signHandler = (e) => {
@@ -178,7 +185,7 @@ const App = () => {
     <div className="App">
 			{
 				//test area to be deleted
-			console.log(calc)
+			// console.log(calc)
 			}
 			<Wrapper>
 				<Screen value={
