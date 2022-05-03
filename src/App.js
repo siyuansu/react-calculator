@@ -67,7 +67,10 @@ const App = () => {
 	const signHandler = (e) => {
 		e.preventDefault()
 		const value = e.target.innerHTML
-
+		if(calc.res == 'Not a number') {
+			console.log('The result is not an number')
+			return
+		}
 		let res = Number(calc.res)
 		let sign = calc.sign
 		if( calc.res===0) {
@@ -101,6 +104,7 @@ const App = () => {
 			setCalc({
 				...calc,
 				sign: value,
+				num: res,
 				input: false
 			})
 		}
@@ -110,9 +114,14 @@ const App = () => {
 
 	const equalsHandler = (e) => {
 		e.preventDefault()
+		if(calc.res == 'Not a number') {
+			console.log('The result is not an number')
+			return
+		}
+
 		let sign = calc.sign
-		if ( calc.input && calc.sign !== '') {
-			let res = calc.res
+		if ( calc.sign !== '') {
+			let res = Number(calc.res)
 			let num = Number(calc.num)
 			res = sign === '/' && calc.num !== 0
 			? res / num
