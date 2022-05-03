@@ -152,14 +152,25 @@ const App = () => {
 
 	const commaHandler = (e) => {
 		e.preventDefault()
+		if(calc.res == 'Not a number') {
+			setCalc({
+				...calc,
+				num: 0
+			})
+		}
 		const value = e.target.innerHTML
-		if ( !calc.num.toString().includes(value)) {
+		if ( calc.input && !calc.num.toString().includes(value)) {
 			setCalc({
 				...calc,
 				num: calc.num + value
 			})
+		} else if ( !calc.input ) {
+			setCalc({
+				...calc,
+				num: '0.',
+				input:true
+			})
 		}
-		console.log('comma')
 	}
 
 	const numHandler = (e) => {
@@ -185,7 +196,7 @@ const App = () => {
     <div className="App">
 			{
 				//test area to be deleted
-			// console.log(calc)
+			console.log(calc)
 			}
 			<Wrapper>
 				<Screen value={
