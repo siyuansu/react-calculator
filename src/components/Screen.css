@@ -2,6 +2,7 @@
 	flex: 1;
 	display: flex;
 	/* background-color:darkcyan; */
+	width:22rem;
 	border-radius: .5rem;
 	margin: .5rem .5rem 0 .5rem;
 	color: white;
@@ -10,4 +11,10 @@
 	align-items: flex-end;
 	justify-content: flex-end;
 	overflow: hidden;
+}
+
+@media (max-width: 25em) {
+  .screen {
+		width:16rem;
+  }
 }
